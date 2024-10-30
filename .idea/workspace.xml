@@ -4,11 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c8153f4-c396-4d6e-9a51-7fec22fa19b1" name="Changes" comment="" />
+    <list default="true" id="2c8153f4-c396-4d6e-9a51-7fec22fa19b1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/JavaBook/Test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/JavaBook/duck/BadDuckling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/JavaBook/duck/FatherDuck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/JavaBook/duck/GoodDuckling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/JavaBook/duck/GooseWatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/JavaBook/duck/MotherDuck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/JavaBook/goose/Goose.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/JavaBook/goose/Gosling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/JavaBook/inland/BirdWatcherFromAFar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/JavaBook/shore/Bird.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/JavaBook/shore/BirdWatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/JavaBook/swan/BadCygnet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/JavaBook/swan/Swan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/JavaBook/swan/Test2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/OrderOfInitialization/Ape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/OrderOfInitialization/Chimpanzee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/OrderOfInitialization/Primate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/StriverSheet/Sort012.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/StriverSheet/kadaneAlgo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode_Java/src/StriverSheet/nextpermutation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
@@ -21,12 +55,38 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="ClientServer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -43,8 +103,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730325010499</updated>
-      <workItem from="1730325011222" duration="5000" />
+      <workItem from="1730325011222" duration="3230000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
