@@ -1,41 +1,41 @@
 package org.example;
 
-import java.io.BufferedInputStream;
-import java.io.DataInputStream;
-import java.io.IOException;
+
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Server {
-        private final ServerSocket server;
-        private DataInputStream in;
-        static final int PORT = 8080;
-        public Server() throws IOException {
-            server = new ServerSocket(PORT);
-            initializeConnection();
-        }
-        private void initializeConnection() throws IOException {
-            Socket clientSocket = server.accept();
-            in = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
-            readClientMessages();
-            closeConnection();
-        }
-        private void readClientMessages() throws IOException {
-            String line;
-            while ((line = in.readUTF()) != null) {
-                line = line.trim();
-                System.out.println(line);
-            }
-        }
-        private void closeConnection() throws IOException {
-            if(in != null) {
-                in.close();
-            }
-            if(server != null && !server.isClosed()) {
-                server.close();
-            }
-        }
     public static void main(String[] args) throws IOException {
-            new Server();
+        Socket socket = null;
+        InputStreamReader isr = null;
+        OutputStreamWriter osw = null;
+        BufferedReader br = null;
+        BufferedWriter bw = null;
+        ServerSocket serverSocket = new ServerSocket(1234);
+        while (true) {
+            try {
+                socket = serverSocket.accept();
+                isr = new InputStreamReader(socket.getInputStream());
+                osw = new OutputStreamWriter(socket.getOutputStream());
+                br = new BufferedReader(isr);
+                bw = new BufferedWriter(osw);
+
+                while (true) {
+                    String messageFromClient = br.readLine();
+                    System.out.println("Client: " + messageFromClient);
+                    bw.write("MSG recieved");
+                    bw.newLine();
+                    bw.flush();
+                    if (messageFromClient.equalsIgnoreCase("BYE")) {
+                        break;
+                    }
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
+
+
 }

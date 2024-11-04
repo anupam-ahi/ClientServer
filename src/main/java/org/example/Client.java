@@ -1,28 +1,46 @@
 package org.example;
 
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class Client {
-    private Socket client;
-    private DataOutputStream out;
-    public Client() {
+    public static void main(String[] args) {
+        Socket socket = null;
+        InputStreamReader isr = null;
+        OutputStreamWriter osw = null;
+        BufferedReader br = null;
+        BufferedWriter bw = null;
         try{
-            client = new Socket("localhost", Server.PORT);
-            out = new DataOutputStream(client.getOutputStream());
-            writeMessages();
-        }catch (IOException e){}
-    }
-    public void writeMessages() throws IOException {
-        String message = "Hello, I am Anupam. ";
-        out.writeUTF(message);
-    }
-    private void close() throws IOException {
-        client.close();
-        out.close();
-    }
-    public static void main(String[] args)  throws IOException {
-        new Client();
+            socket = new Socket("localhost", 1234);
+            isr = new InputStreamReader(socket.getInputStream());
+            osw = new OutputStreamWriter(socket.getOutputStream());
+            br = new BufferedReader(isr);
+            bw = new BufferedWriter(osw);
+            Scanner sc = new Scanner(System.in);
+            while(true){
+                String messageToSend = sc.nextLine();
+                bw.write(messageToSend);
+                bw.newLine();
+                bw.flush();
+                System.out.println("Server: " +br.readLine());
+                if(messageToSend.equalsIgnoreCase("bye")){
+                    break;
+                }
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        finally{
+            try{
+                if(socket != null) socket.close();
+                if(isr != null) isr.close();
+                if(osw != null) osw.close();
+                if(br != null) br.close();
+                if(bw != null) bw.close();
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+        }
     }
 }
